@@ -8,8 +8,8 @@ import trimesh
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pred_path", type=str, default="./predictions/vocaset")
-    parser.add_argument("--gt_path", type=str, default="./Datasets/vocaset/vertices_npy")
-    parser.add_argument("--templates_path", type=str, default="./Datasets/vocaset/templates.pkl")
+    parser.add_argument("--gt_path", type=str, default="../Datasets/vocaset/vertices_npy")
+    parser.add_argument("--templates_path", type=str, default="../Datasets/vocaset/templates.pkl")
     parser.add_argument("--dataset", type=str, default="vocaset")
     args = parser.parse_args()
 

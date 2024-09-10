@@ -64,12 +64,12 @@ def main():
     parser.add_argument("--device", type=str, default="cuda:0")
     parser.add_argument("--model_path", type=str, default="./results/Scantalk_Masked_Velocity_Cosine_Loss_150.pth.tar")
     parser.add_argument("--result_dir", type=str, default='./predictions')
-    parser.add_argument("--actor_file_voca", type=str, default="./Datasets/vocaset/templates.pkl", help='templates')
-    parser.add_argument("--actor_file_biwi", type=str, default="./Datasets/Biwi_6/templates", help='templates')
-    parser.add_argument("--actor_file_multiface", type=str, default="./Datasets/Multiface/templates", help='templates')
-    parser.add_argument("--template_file_voca", type=str, default="./Datasets/vocaset/flame_model/FLAME_sample.ply", help='faces to animate')
-    parser.add_argument("--template_file_biwi", type=str, default="./Datasets/Biwi_6/templates/F1.obj", help='faces to animate')
-    parser.add_argument("--template_file_multiface", type=str, default="./Datasets/Multiface/templates/20180227.ply", help='faces to animate')
+    parser.add_argument("--actor_file_voca", type=str, default="../Datasets/vocaset/templates.pkl", help='templates')
+    parser.add_argument("--actor_file_biwi", type=str, default="../Datasets/Biwi_6/templates", help='templates')
+    parser.add_argument("--actor_file_multiface", type=str, default="../Datasets/Multiface/templates", help='templates')
+    parser.add_argument("--template_file_voca", type=str, default="../Datasets/vocaset/flame_model/FLAME_sample.ply", help='faces to animate')
+    parser.add_argument("--template_file_biwi", type=str, default="../Datasets/Biwi_6/templates/F1.obj", help='faces to animate')
+    parser.add_argument("--template_file_multiface", type=str, default="../Datasets/Multiface/templates/20180227.ply", help='faces to animate')
     parser.add_argument("--train_subjects", type=str, default="FaceTalk_170728_03272_TA"
                                                               " FaceTalk_170904_00128_TA FaceTalk_170725_00137_TA FaceTalk_170915_00223_TA"
                                                               " FaceTalk_170811_03274_TA FaceTalk_170913_03279_TA"
@@ -79,12 +79,12 @@ def main():
                                                             " FaceTalk_170908_03277_TA F7 M5 20190828 20190521")
     parser.add_argument("--test_subjects", type=str, default="FaceTalk_170809_00138_TA"
                                                              " FaceTalk_170731_00024_TA F8 M6 20181017 20180105")
-    parser.add_argument("--wav_path_voca", type=str, default="./Datasets/vocaset/wav", help='path of the audio signals')
-    parser.add_argument("--vertices_path_voca", type=str, default="./Datasets/vocaset/vertices_npy", help='path of the ground truth')
-    parser.add_argument("--wav_path_biwi", type=str, default="./Datasets/Biwi_6/wav", help='path of the audio signals')
-    parser.add_argument("--vertices_path_biwi", type=str, default="./Datasets/Biwi_6/vertices", help='path of the ground truth')
-    parser.add_argument("--wav_path_multiface", type=str, default="./Datasets/Multiface/wav", help='path of the audio signals')
-    parser.add_argument("--vertices_path_multiface", type=str, default="./Datasets/Multiface/vertices", help='path of the ground truth')
+    parser.add_argument("--wav_path_voca", type=str, default="../Datasets/vocaset/wav", help='path of the audio signals')
+    parser.add_argument("--vertices_path_voca", type=str, default="../Datasets/vocaset/vertices_npy", help='path of the ground truth')
+    parser.add_argument("--wav_path_biwi", type=str, default="../Datasets/Biwi_6/wav", help='path of the audio signals')
+    parser.add_argument("--vertices_path_biwi", type=str, default="../Datasets/Biwi_6/vertices", help='path of the ground truth')
+    parser.add_argument("--wav_path_multiface", type=str, default="../Datasets/Multiface/wav", help='path of the audio signals')
+    parser.add_argument("--vertices_path_multiface", type=str, default="../Datasets/Multiface/vertices", help='path of the ground truth')
 
     parser.add_argument("--info", type=str, default="", help='experiment info')
     

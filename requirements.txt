@@ -1,0 +1,7 @@
+scikit-learn
+librosa
+transformers
+pyrender
+potpourri3d
+sacremoses
+robust_laplacian
