@@ -65,8 +65,7 @@ It is recommended to use a Conda environment for this setup.
     cd mesh
     ```
 
-2. **Modify the Makefile to avoid error**
-    Modify line 7 of the Makefile with:
+2. **Modify line 7 of the Makefile to avoid error**
     ```
     @pip install --no-deps --config-settings="--boost-location=$$BOOST_INCLUDE_DIRS" --verbose --no-cache-dir .
     ```
@@ -106,14 +105,12 @@ For training and testing ScanTalk, we utilized three open-source datasets for 3D
 We are releasing two versions of ScanTalk: one named `scantalk_mse.pth.tar`, trained using Mean Square Error Loss, and another named `scantalk_mse_masked_velocity.pth.tar`, which is trained with a combination of multiple loss functions. Both models are available for download [**here**](https://drive.google.com/drive/folders/1iH4ugUI_JoGiejZj3ENltxSIpUnFY4zl?usp=sharing). After downloading, place the `results` folder within the `src` directory.
 
 </details>
-
+<details>
 <summary><h2>ScanTalk Training, Testing and Demo</h2></summary> 
 
 The files `scantalk_train.py` and `scantalk_test.py` are used for training and testing, respectively. `scantalk_test.py` generates a directory containing all the ScanTalk predictions for each test set in the datasets. After obtaining the predictions, `compute_metrics.py` is used to calculate evaluation metrics by comparing the ground truth with the model's predictions.
 
 You can use `demo.py` to run a demo of ScanTalk, animating any 3D face that has been aligned with the training set.
-
-
 </details>
 
 ## Authors
