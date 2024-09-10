@@ -210,12 +210,12 @@ def generate_meshes(args):
 
 def main():
     parser = argparse.ArgumentParser(description='ScanTalk Demo')
-    parser.add_argument("--device", type=str, default="cuda:0")
-    parser.add_argument("--save_path", type=str, default='./Demo1', help='path to save the results')
-    parser.add_argument("--audio", type=str, default='/equilibrium/fnocentini/ScanTalk/photo.wav')
-    parser.add_argument("--actor_file", type=str, default="/equilibrium/fnocentini/Datasets/vocaset/flame_model/FLAME_sample.ply", help='face to animate')
-    parser.add_argument("--model_path", type=str, default='/equilibrium/fnocentini/ScanTalk/results/Scantalk_Masked_Velocity_Cosine_Loss_150.pth.tar')
-    parser.add_argument("--video_name", type=str, default='demo1.mp4')     
+    parser.add_argument("--device", type=str, default="cuda")
+    parser.add_argument("--save_path", type=str, default='./Demo', help='path to save the results')
+    parser.add_argument("--audio", type=str, default='../Datasets/photo.wav')
+    parser.add_argument("--actor_file", type=str, default="../Datasets/thanos.ply", help='face to animate')
+    parser.add_argument("--model_path", type=str, default='./results/scantalk_masked_velocity_loss.pth.tar')
+    parser.add_argument("--video_name", type=str, default='demo.mp4')     
     parser.add_argument("--fps", type=int, default=30, help='frames per second')
 
     ##Diffusion Net hyperparameters

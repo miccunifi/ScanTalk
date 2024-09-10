@@ -136,7 +136,7 @@ def main():
     parser = argparse.ArgumentParser(description='ScanTalk: 3D Talking Heads from Unregistered Meshes')
     parser.add_argument("--lr", type=float, default=0.0001, help='learning rate')
     parser.add_argument("--epochs", type=int, default=200, help='number of epochs')
-    parser.add_argument("--device", type=str, default="cuda:0")
+    parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--result_dir", type=str, default='./results')
     parser.add_argument("--template_file_voca", type=str, default="../Datasets/vocaset/flame_model/FLAME_sample.ply", help='faces to animate')
     parser.add_argument("--template_file_biwi", type=str, default="../Datasets/Biwi_6/templates/F1.obj", help='faces to animate')
