@@ -24,15 +24,12 @@ Architecture of **ScanTalk**. A novel Encoder-Decoder framework designed to dyna
 
 ## Citation
 ```bibtex
-@misc{nocentini2024scantalk3dtalkingheads,
-      title={ScanTalk: 3D Talking Heads from Unregistered Scans}, 
-      author={Federico Nocentini and Thomas Besnier and Claudio Ferrari and Sylvain Arguillere and Stefano Berretti and Mohamed Daoudi},
-      year={2024},
-      eprint={2403.10942},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2403.10942}, 
-}
+@inproceedings{nocentini2024scantalk3dtalkingheads,
+    title = {ScanTalk: 3D Talking Heads from Unregistered Scans},
+    author = {Nocentini, F. and Besnier, T. and Ferrari, C. and Arguillere, S. and Berretti, S. and Daoudi, M.},
+    booktitle = {Proceedings of the IEEE/CVF European Conference on Computer Vision (ECCV)},
+    year = {2024},
+  }
 ```
 
 <details>
