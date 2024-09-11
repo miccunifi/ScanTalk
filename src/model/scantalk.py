@@ -27,14 +27,14 @@ class ScanTalk(nn.Module):
                                           C_out=self.latent_channels,
                                           C_width=self.latent_channels, 
                                           N_block=4, 
-                                          outputs_at= 'vertices',#'global_mean', 
+                                          outputs_at= 'vertices', 
                                           dropout=False)
         # decoder
         self.decoder = diffusion_net.layers.DiffusionNet(C_in=self.latent_channels*2,
                                           C_out=self.out_channels,
                                           C_width=self.latent_channels, 
                                           N_block=4, 
-                                          outputs_at='vertices',#'global_mean', 
+                                          outputs_at='vertices', 
                                           dropout=False)
         
         print("encoder parameters: ", count_parameters(self.encoder))
