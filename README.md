@@ -13,8 +13,6 @@ This is the **official repository** of the [**ECCV 2024 paper**](https://fedenoc
 
 ## Overview
 
-### Abstract
-
 Speech-driven 3D talking heads generation has emerged as a significant area of interest among researchers, presenting numerous challenges. Existing methods are constrained by animating faces with fixed topologies, wherein point-wise correspondence is established, and the number and order of points remains consistent across all identities the model can animate. 
 In this work, we present ScanTalk, a novel framework capable of animating 3D faces in arbitrary topologies including scanned data. Our approach relies on the DiffusionNet architecture to overcome the fixed topology constraint, offering promising avenues for more flexible and realistic 3D animations. By leveraging the power of DiffusionNet, ScanTalk not only adapts to diverse facial structures but also maintains fidelity when dealing with scanned data, thereby enhancing the authenticity and versatility of generated 3D talking heads. Through comprehensive comparisons with state-of-the-art methods, we validate the efficacy of our approach, demonstrating its capacity to generate realistic talking heads comparable to existing techniques. While our primary objective is to develop a generic method free from topological constraints, all state-of-the-art methodologies are bound by such limitations. 
 
@@ -22,7 +20,7 @@ In this work, we present ScanTalk, a novel framework capable of animating 3D fac
 We present **ScanTalk**, a deep learning architecture to animate **any** 3D face mesh driven by a speech. ScanTalk is robust enough to learn on multiple unrelated datasets with a unique model, whilst allowing us to infer on unregistered face meshes.
 
 ![assets/teaser.png](assets/scantalk.png "Architecture of the method")
-Architecture of **ScanTalk**. A novel Encoder-Decoder framework designed to dynamically animate any 3D face based on a spoken sentence from an audio file. The Encoder integrates the 3D neutral face $m_i^n$, per-vertex surface features $P_i^{n}$ (crucial for DiffusionNet and precomputed by the operators $OP$), and the audio file $A_i$, yielding a fusion of per-vertex and audio features. These combined descriptors, alongside $P_i^n$, are then passed to the Decoder, which mirrors a reversed DiffusionNet encoder structure. The Decoder predicts the deformation of the 3D neutral face, which is then combined with the original 3D neutral face $m_i^n$ to generate the animated sequence..
+**ScanTalk** is novel Encoder-Decoder framework designed to dynamically animate any 3D face based on a spoken sentence from an audio file. The Encoder integrates the 3D neutral face $m_i^n$, per-vertex surface features $P_i^{n}$ (crucial for DiffusionNet and precomputed by the operators $OP$), and the audio file $A_i$, yielding a fusion of per-vertex and audio features. These combined descriptors, alongside $P_i^n$, are then passed to the Decoder, which mirrors a reversed DiffusionNet encoder structure. The Decoder predicts the deformation of the 3D neutral face, which is then combined with the original 3D neutral face $m_i^n$ to generate the animated sequence.
 
 ## Citation
 ```bibtex
