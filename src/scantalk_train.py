@@ -20,7 +20,7 @@ class Masked_Loss(nn.Module):
         self.mse = nn.MSELoss(reduction='none')
 
 
-    def forward(self, target, predictions, target_disp, predictions_disp, dataset_type):
+    def forward(self, target, predictions, dataset_type):
         
         rec_loss = torch.mean(self.mse(predictions, target))
         
