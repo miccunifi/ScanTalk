@@ -4,6 +4,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2403.10942)
 [![Generic badge](https://img.shields.io/badge/Project%20Page-F76810)](https://fedenoce.github.io/scantalk/)
+[![Badge](https://img.shields.io/badge/Demo-Open_in_colab-blue?labelColor=gray)](https://colab.research.google.com/drive/1obLydqYyv3bwzSaCYl5_HAVJGVj5VWRa#scrollTo=GnVAqrw65Ey4)
 [![GitHub Stars](https://img.shields.io/github/stars/miccunifi/scantalk?style=social)](https://github.com/miccunifi/scantalk)
 
 
