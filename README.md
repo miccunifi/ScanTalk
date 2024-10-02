@@ -28,7 +28,7 @@ We present **ScanTalk**, a deep learning architecture to animate **any** 3D face
 @inproceedings{nocentini2024scantalk3dtalkingheads,
     title = {ScanTalk: 3D Talking Heads from Unregistered Scans},
     author = {Nocentini, F. and Besnier, T. and Ferrari, C. and Arguillere, S. and Berretti, S. and Daoudi, M.},
-    booktitle = {Proceedings of the IEEE/CVF European Conference on Computer Vision (ECCV)},
+    booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
     year = {2024},
   }
 ```
