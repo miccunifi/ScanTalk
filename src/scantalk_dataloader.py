@@ -34,8 +34,8 @@ class Dataset(data.Dataset):
         gradY = self.data[index]["gradY"]
         faces = self.data[index]["faces"]
         dataset = self.data[index]["dataset"]
-        return {
-                "audio": torch.FloatTensor(audio),
+        
+        return {"audio": torch.FloatTensor(audio),
                 "vertices": torch.FloatTensor(vertices),
                 "template": torch.FloatTensor(template),
                 "mass": torch.FloatTensor(np.array(mass)).float(),
