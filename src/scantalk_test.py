@@ -41,18 +41,17 @@ def test(args):
     
     pbar = tqdm(enumerate(dataset["test"]), total=len(dataset["test"]))
     for b, sample in pbar:
-        audio = sample[0].to(device)
-        vertices = sample[1].to(device).squeeze(0)
-        template = sample[2].to(device)
-        mass = sample[3].to(device)
-        L = sample[4].to(device)
-        evals = sample[5].to(device)
-        evecs = sample[6].to(device)
-        gradX = sample[7].to(device)
-        gradY = sample[8].to(device)
-        filename = sample[9]
-        faces = sample[10].to(device)
-        dataset_type = sample[11][0]
+        audio = sample["audio"].to(device)
+        vertices = sample["vertices"].to(device).squeeze(0)
+        template = sample["template"].to(device)
+        mass = sample["mass"].to(device)
+        L = sample["L"].to(device)
+        evals = sample["evals"].to(device)
+        evecs = sample["evecs"].to(device)
+        gradX = sample["gradX"].to(device)
+        gradY = sample["gradY"].to(device)
+        faces = sample["faces"].to(device)
+        dataset_type = sample["dataset"][0]
         vertices_pred, _ = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
         vertices = vertices.detach().cpu().numpy()
         vertices_pred = vertices_pred.detach().cpu().numpy()
