@@ -119,7 +119,7 @@ def train(args):
                     dataset_type = sample["dataset"][0]
                     displacements = vertices - template
                     vertices_pred, displacements_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
-                    loss = criterion_val(vertices, vertices_pred)
+                    loss = criterion(vertices, vertices_pred)
                     t_test_loss += loss.item()
                     pbar_talk.set_description(
                                     "(Epoch {}) VAL LOSS:{:.10f}".format((epoch + 1), (t_test_loss)/(b+1)))
