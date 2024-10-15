@@ -77,17 +77,17 @@ def train(args):
         
         pbar_talk = tqdm(enumerate(dataset["train"]), total=len(dataset["train"]))
         for b, sample in pbar_talk:
-            audio = sample[0].to(device)
-            vertices = sample[1].to(device).squeeze(0)
-            template = sample[2].to(device)
-            mass = sample[3].to(device)
-            L = sample[4].to(device)
-            evals = sample[5].to(device)
-            evecs = sample[6].to(device)
-            gradX = sample[7].to(device)
-            gradY = sample[8].to(device)
-            faces = sample[10].to(device)
-            dataset_type = sample[11][0]
+            audio = sample["audio"].to(device)
+            vertices = sample["vertices"].to(device).squeeze(0)
+            template = sample["template"].to(device)
+            mass = sample["mass"].to(device)
+            L = sample["L"].to(device)
+            evals = sample["evals"].to(device)
+            evecs = sample["evecs"].to(device)
+            gradX = sample["gradX"].to(device)
+            gradY = sample["gradY"].to(device)
+            faces = sample["faces"].to(device)
+            dataset_type = sample["dataset"][0]
             displacements = vertices - template
             vertices_pred, displacements_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
             optim.zero_grad()
@@ -106,17 +106,17 @@ def train(args):
                 t_test_loss = 0
                 pbar_talk = tqdm(enumerate(dataset["valid"]), total=len(dataset["valid"]))
                 for b, sample in pbar_talk:
-                    audio = sample[0].to(device)
-                    vertices = sample[1].to(device).squeeze(0)
-                    template = sample[2].to(device)
-                    mass = sample[3].to(device)
-                    L = sample[4].to(device)
-                    evals = sample[5].to(device)
-                    evecs = sample[6].to(device)
-                    gradX = sample[7].to(device)
-                    gradY = sample[8].to(device)
-                    faces = sample[10].to(device)
-                    dataset_type = sample[11][0]
+                    audio = sample["audio"].to(device)
+                    vertices = sample["vertices"].to(device).squeeze(0)
+                    template = sample["template"].to(device)
+                    mass = sample["mass"].to(device)
+                    L = sample["L"].to(device)
+                    evals = sample["evals"].to(device)
+                    evecs = sample["evecs"].to(device)
+                    gradX = sample["gradX"].to(device)
+                    gradY = sample["gradY"].to(device)
+                    faces = sample["faces"].to(device)
+                    dataset_type = sample["dataset"][0]
                     displacements = vertices - template
                     vertices_pred, displacements_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
                     loss = criterion_val(vertices, vertices_pred)
