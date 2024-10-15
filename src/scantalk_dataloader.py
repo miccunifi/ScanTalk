@@ -75,7 +75,6 @@ def read_data(args):
     with open(template_file, 'rb') as fin:
         templates = pickle.load(fin, encoding='latin1')
             
-    k=0
     subject_id_list = []
     mass_dict = {}
     L_dict = {}
@@ -132,7 +131,6 @@ def read_data(args):
     reference = trimesh.load(args.template_file_biwi, process=False)
     template_tri = reference.faces
         
-    k=0
     for r, ds, fs in os.walk(audio_path_biwi):
         for f in tqdm(fs):
             if f.endswith("wav") and f[3] != 'e':
@@ -179,7 +177,6 @@ def read_data(args):
     reference = trimesh.load(args.template_file_multiface, process=False)
     template_tri = reference.faces
         
-    k=0
     for r, ds, fs in os.walk(audio_path_multiface):
         for f in tqdm(fs):
             if f.endswith("wav"):
