@@ -34,8 +34,21 @@ class Dataset(data.Dataset):
         gradY = self.data[index]["gradY"]
         faces = self.data[index]["faces"]
         dataset = self.data[index]["dataset"]
-        return torch.FloatTensor(audio), torch.FloatTensor(vertices), torch.FloatTensor(template), torch.FloatTensor(np.array(mass)).float(), L.float(), torch.FloatTensor(np.array(evals)), torch.FloatTensor(np.array(evecs)), gradX.float(), gradY.float(), file_name, faces.float(), dataset
-
+        return {
+                "audio": torch.FloatTensor(audio),
+                "vertices": torch.FloatTensor(vertices),
+                "template": torch.FloatTensor(template),
+                "mass": torch.FloatTensor(np.array(mass)).float(),
+                "L": L.float(),
+                "evals": torch.FloatTensor(np.array(evals)),
+                "evecs": torch.FloatTensor(np.array(evecs)),
+                "gradX": gradX.float(),
+                "gradY": gradY.float(),
+                "file_name": file_name,
+                "faces": faces.float(),
+                "dataset": dataset
+               }
+        
     def __len__(self):
         return self.len
 
