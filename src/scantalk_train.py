@@ -7,7 +7,7 @@ import argparse
 from tqdm import tqdm
 import librosa
 import random
-from transformers import Wav2Vec2Processor
+import scipy
 from scantalk_dataloader import get_dataloaders
 from model.scantalk import ScanTalk
 
@@ -61,8 +61,6 @@ def train(args):
     scantalk = ScanTalk(args.in_channels, args.out_channels, args.latent_channels, args.lstm_layers).to(args.device)
 
     print("model parameters: ", count_parameters(scantalk))
-
-    processor = Wav2Vec2Processor.from_pretrained("facebook/hubert-xlarge-ls960-ft")    
     
     dataset = get_dataloaders(args)
 
