@@ -28,7 +28,6 @@ def test(args):
         os.makedirs(os.path.join(args.result_dir, 'multiface'))
 
     scantalk = ScanTalk(args.in_channels, args.out_channels, args.latent_channels, args.lstm_layers).to(args.device)
-
     
     checkpoint = torch.load(args.model_path, map_location=device)
     scantalk.load_state_dict(checkpoint['autoencoder_state_dict'])
@@ -52,7 +51,7 @@ def test(args):
         gradY = sample["gradY"].to(device)
         faces = sample["faces"].to(device)
         dataset_type = sample["dataset"][0]
-        vertices_pred, _ = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
+        vertices_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
         vertices = vertices.detach().cpu().numpy()
         vertices_pred = vertices_pred.detach().cpu().numpy()
         np.save(os.path.join(args.result_dir, dataset_type, filename[0][:-4] + ".npy"), vertices_pred)
