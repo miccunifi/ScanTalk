@@ -71,7 +71,7 @@ def train(args):
 
     optim = torch.optim.Adam(scantalk.parameters(), lr=args.lr)
 
-    for epoch in range(starting_epoch, args.epochs):
+    for epoch in range(args.epochs):
         scantalk.train()
         tloss = 0
         
