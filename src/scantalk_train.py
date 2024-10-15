@@ -86,11 +86,10 @@ def train(args):
             gradY = sample["gradY"].to(device)
             faces = sample["faces"].to(device)
             dataset_type = sample["dataset"][0]
-            displacements = vertices - template
-            vertices_pred, displacements_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
+            vertices_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
             optim.zero_grad()
 
-            loss = criterion(vertices, vertices_pred, displacements, displacements_pred, dataset_type) 
+            loss = criterion(vertices, vertices_pred) 
             torch.nn.utils.clip_grad_norm_(scantalk.parameters(), 10.0)
             loss.backward()
             optim.step()
@@ -115,8 +114,7 @@ def train(args):
                     gradY = sample["gradY"].to(device)
                     faces = sample["faces"].to(device)
                     dataset_type = sample["dataset"][0]
-                    displacements = vertices - template
-                    vertices_pred, displacements_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
+                    vertices_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
                     loss = criterion(vertices, vertices_pred)
                     t_test_loss += loss.item()
                     pbar_talk.set_description(
