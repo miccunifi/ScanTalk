@@ -108,7 +108,7 @@ We are releasing two versions of ScanTalk: one named `scantalk_mse.pth.tar`, tra
 
 The files `scantalk_train.py` and `scantalk_test.py` are used for training and testing, respectively. `scantalk_test.py` generates a directory containing all the ScanTalk predictions for each test set in the datasets. After obtaining the predictions, `compute_metrics.py` is used to calculate evaluation metrics by comparing the ground truth with the model's predictions.
 
-You can use `demo.py` to run a demo of ScanTalk, animating any 3D face that has been aligned with the training set. Both audio and 3D face for the demo are in the  `src/Example` folder.
+You can use `demo.py` to run a demo of ScanTalk, animating any 3D face that has been aligned with the training set. Both audio and 3D face for the demo are in the  `src/examples` folder.
 </details>
 
 ## Authors
