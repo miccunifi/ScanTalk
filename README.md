@@ -10,7 +10,9 @@
 
 This is the **official repository** of the [**ECCV 2024 paper**](https://fedenoce.github.io/scantalk/) "*ScanTalk: 3D Talking Heads from Unregistered Scans*" by Federico Nocentini, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Stefano Berretti, Mohamed Daoudi.
 
-🔥🔥 **[2024/09/10] Our code is now public available! Feel free to explore, use, and contribute!** 🔥🔥
+🔥🔥 **[2024/09/10] Our code is now public available! Feel free to explore, use, and contribute!** 
+
+🔥🔥 **[2024/10/25]** An extension of ScanTalk: "*Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads*" is available on [arxiv](https://arxiv.org/abs/2410.11041).
 
 ## Overview
 
