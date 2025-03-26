@@ -54,7 +54,7 @@ def test(args):
         vertices_pred = scantalk.forward(audio, template, vertices, mass, L, evals, evecs, gradX, gradY, faces, dataset_type)
         vertices = vertices.detach().cpu().numpy()
         vertices_pred = vertices_pred.detach().cpu().numpy()
-        np.save(os.path.join(args.result_dir, dataset_type, filename[0][:-4] + ".npy"), vertices_pred)
+        np.save(os.path.join(args.result_dir, dataset_type, sample["file_name"][0][:-4] + ".npy"), vertices_pred)
     
         
 def main():
