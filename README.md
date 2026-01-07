@@ -12,7 +12,11 @@ This is the **official repository** of the [**ECCV 2024 paper**](https://fedenoc
 
 🔥🔥 **[2024/09/10] Our code is now public available! Feel free to explore, use, and contribute!** 
 
-🔥🔥 **[2024/10/25]** An extension of ScanTalk: "*Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads*" is available on [arxiv](https://arxiv.org/abs/2410.11041).
+🔥🔥 **[2025/12/24]** Excited to share that our ScanTalk extension,  
+**“Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads,”**  
+has been accepted for publication in the *International Journal of Computer Vision (IJCV)*.  
+The paper is available on [arXiv](https://arxiv.org/abs/2410.11041).
+
 
 ## Overview
 
